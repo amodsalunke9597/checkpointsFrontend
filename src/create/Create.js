@@ -7,8 +7,8 @@ import './Create.scss'
 function CreateAndUpdateCatId() {
   const [createCatalogueId, setCreateCatalogueId] = useState('');
   const [updateCatalogueId, setUpdateCatalogueId] = useState('');
-  const [checkpoints, setCheckpoints] = useState('');
-  const [updateCheckpoints, setUpdateCheckpoints] = useState('');
+  const [checkpoints, setCheckpoints] = useState([]);
+  const [updateCheckpoints, setUpdateCheckpoints] = useState([]);
 
   const handleCreateSubmit = async (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ function CreateAndUpdateCatId() {
       console.log(response);
       alert(`Catalogue ID ${createCatalogueId} created successfully!`);
       setCreateCatalogueId('');
-      setCheckpoints('');
+      setCheckpoints([]);
     } catch (error) {
       console.error(error);
       alert(`Error creating catalogue ID ${createCatalogueId}: ${error.message}`);
@@ -32,16 +32,17 @@ function CreateAndUpdateCatId() {
     try {
       const response = await axiosClient.post('/catId/updateCatId', {
         catalogueId: updateCatalogueId,
-        checkpoints: updateCheckpoints
+        checkpoints: updateCheckpoints // Pass the array directly
       });
       console.log(response);
       alert(`Catalogue ID ${updateCatalogueId} updated successfully!`);
-      setUpdateCheckpoints('');
+      setUpdateCheckpoints([]);
     } catch (error) {
       console.error(error);
       alert(`Error updating catalogue ID ${updateCatalogueId}: ${error.message}`);
     }
   };
+  
 
   const handleCreateCatalogueIdChange = (event) => {
     setCreateCatalogueId(event.target.value);
