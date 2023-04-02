@@ -1,0 +1,65 @@
+.Create {
+    max-width: 600px;
+    margin: 0 auto;
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  
+    form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-top: 0.5rem;
+        font-weight: bold;
+      }
+  
+      input[type="text"],
+      textarea {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        margin-top: 0.25rem;
+        width: 100%;
+      }
+  
+      button[type="submit"] {
+        background-color: #0074d9;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+      }
+  
+      @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+  
+        label {
+          margin-top: 1rem;
+          margin-right: 1rem;
+          width: 30%;
+          text-align: right;
+        }
+  
+        input[type="text"],
+        textarea {
+          margin-top: 0;
+          width: 70%;
+        }
+  
+        button[type="submit"] {
+          margin-top: 1.5rem;
+          width: auto;
+        }
+      }
+    }
+  }
+  
