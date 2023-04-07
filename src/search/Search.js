@@ -18,6 +18,7 @@ function Search() {
       setCatalogue(response.data);
     } catch (error) {
       console.log(error);
+      alert(`Catalogue ID ${catalogueId} not found !`);
     }
   };
   

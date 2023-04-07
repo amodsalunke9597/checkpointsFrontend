@@ -1,0 +1,52 @@
+.DeleteCatId {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      label {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+  
+        input[type="text"] {
+          padding: 5px;
+          font-size: 16px;
+          border: 2px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+  
+      button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          background-color: #e53935;
+        }
+      }
+    }
+  }
