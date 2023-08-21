@@ -24,7 +24,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>Important Checkpoint Related to CatalogueID</h1>
+      <h1>Important CTQ's Related to Products and Process</h1>
       <Search />
      
       <button onClick={handleLoadAllCatIds}>Load All Catalogue IDs</button>
@@ -40,7 +40,7 @@ function App() {
       }
       </div>
   
-      <p>Add <span className='bold'> , </span> after your one point end whenever you try update or create new cat ID</p>
+      <p>Add <span className='bold'> # </span> to create a separate line while writing the checkpoints.</p>
       <Create />
       <DeleteCatId />
     </div>

@@ -1,8 +1,8 @@
 .DeleteCatId {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
     padding: 20px;
   
     h2 {
@@ -15,7 +15,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: stretch;
   
       label {
         display: block;

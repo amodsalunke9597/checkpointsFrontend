@@ -42,8 +42,8 @@ function Search() {
       </form>
       {catalogue && (
         <div>
-          <h2>Catalogue ID: {catalogue.catalogueId}</h2>
-          <h3>Checkpoints:</h3>
+          <h2>Release/Product ID/Product Series: => {catalogueId} </h2>
+          <h3>CTQ Points/Major Discussion:</h3>
           <ul>
             {catalogue.checkpoints.map((checkpoint) => (
               <li key={checkpoint}>{checkpoint}</li>

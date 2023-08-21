@@ -14,7 +14,7 @@ function CreateAndUpdateCatId() {
   const handleUpdateSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axiosClient.post('/catId/updateCatId', {
+      const response = await axiosClient.post('/catId/createCatId', {
         catalogueId: updateCatalogueId,
         checkpoints: updateCheckpoints // Pass the array directly
       });
@@ -55,29 +55,31 @@ function CreateAndUpdateCatId() {
   
   const handleUpdateCheckpointsChange = (event) => {
     const value = event.target.value;
-    const checkpointsArray = value.split(',');
+    const checkpointsArray = value.split(/[#]/); // Split using , or #
     setUpdateCheckpoints(checkpointsArray);
   };
+  
 
   const handleUpdateExistingCheckpointsChange = (event) => {
     const value = event.target.value;
-    const checkpointsArray = value.split(',');
+    const checkpointsArray = value.split(/[#]/);
     setUpdateExistingCheckpoints(checkpointsArray);
   };
+  
   
 
 
   return (
     <div className='Create'>
       <form onSubmit={handleUpdateSubmit}>
-        <h2>Create Catalogue ID</h2>
+        <h2>Create Lines</h2>
         <label>
-          Catalogue ID:
+         Event Name/Catalogue
           <input type="text" value={updateCatalogueId} onChange={handleUpdateCatalogueIdChange} />
         </label>
         <br />
         <label>
-          Checkpoints:
+          Lines:
           <textarea value={updateCheckpoints} onChange={handleUpdateCheckpointsChange} />
         </label>
         <br />
@@ -85,14 +87,14 @@ function CreateAndUpdateCatId() {
       </form>
 
       <form onSubmit={handleUpdateExistingSubmit}>
-        <h2>Update Existing Catalogue ID</h2>
+        <h2>Update Existing Lines</h2>
         <label>
-          Catalogue ID:
+          Event Name/Catalogue
           <input type="text" value={updateExistingCatalogueId} onChange={handleUpdateExistingCatalogueIdChange} />
         </label>
         <br />
         <label>
-          Checkpoints:
+          Lines:
           <textarea value={updateExistingCheckpoints} onChange={handleUpdateExistingCheckpointsChange} />
         </label>
         <br />
